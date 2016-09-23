@@ -24,6 +24,8 @@ class Client:
         self.api_version = self.API_VERSION
         self.api_key = ''
         self.payments = Resource.Payments(self)
+        self.customers = Resource.Customers(self)
+        self.customers_mandates = Resource.CustomerMandates(self)
         self.payment_refunds = Resource.Refunds(self)
         self.issuers = Resource.Issuers(self)
         self.methods = Resource.Methods(self)
