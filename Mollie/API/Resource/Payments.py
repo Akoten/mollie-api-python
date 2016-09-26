@@ -27,7 +27,7 @@ class Refunds(Base):
         return Refund(result)
 
     def getResourceName(self):
-        return 'payments/%i/refunds' % self.payment_id
+        return 'payments/%s/refunds' % self.payment_id
 
     def on(self, payment):
         self.payment_id = payment['id']
